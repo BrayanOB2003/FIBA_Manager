@@ -23,11 +23,11 @@
 ![Main view](https://github.com/BrayanOB2003/FIBA_Manager/blob/main/docs/screenshots/FIBA1.png)
 
 ### Search options
-![Search option](https://github.com/BrayanOB2003/FIBA_Manager/commit/da780919733b0d40e34aa3b6cbec86f239b74523)
+![Main view](https://github.com/BrayanOB2003/FIBA_Manager/blob/main/docs/screenshots/FIBA2.png)
 
 ### Table display 
 
-![Main view](https://github.com/BrayanOB2003/FIBA_Manager/commit/da780919733b0d40e34aa3b6cbec86f239b74523)
+![Main view](https://github.com/BrayanOB2003/FIBA_Manager/blob/main/docs/screenshots/FIBA3.png)
 
 
 ## Resources(Documentation and other links)
