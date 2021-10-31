@@ -6,13 +6,13 @@ public class Player {
 	String lastName;
 	String age;
 	String team;
-	int pointsPerGame;
-	int reboundsPerGame;
-	int assistsPerGame;
-	int robberiesPerGame;
-	int blocksPerGame;
+	String pointsPerGame;
+	String reboundsPerGame;
+	String assistsPerGame;
+	String robberiesPerGame;
+	String blocksPerGame;
 	
-	public Player(String n,String l,String a,String t, int points,int rebounds,int assists,int robberies, int blocks) {
+	public Player(String n,String l,String a,String t, String points,String rebounds,String assists,String robberies, String blocks) {
 		name = n;
 		lastName=l;
 		age = a;
@@ -56,43 +56,43 @@ public class Player {
 		this.team = team;
 	}
 
-	public int getPointsPerGame() {
+	public String getPointsPerGame() {
 		return pointsPerGame;
 	}
 
-	public void setPointsPerGame(int pointsPerGame) {
+	public void setPointsPerGame(String pointsPerGame) {
 		this.pointsPerGame = pointsPerGame;
 	}
 
-	public int getReboundsPerGame() {
+	public String getReboundsPerGame() {
 		return reboundsPerGame;
 	}
 
-	public void setReboundsPerGame(int reboundsPerGame) {
+	public void setReboundsPerGame(String reboundsPerGame) {
 		this.reboundsPerGame = reboundsPerGame;
 	}
 
-	public int getAssistsPerGame() {
+	public String getAssistsPerGame() {
 		return assistsPerGame;
 	}
 
-	public void setAssistsPerGame(int assistsPerGame) {
+	public void setAssistsPerGame(String assistsPerGame) {
 		this.assistsPerGame = assistsPerGame;
 	}
 
-	public int getRobberiesPerGame() {
+	public String getRobberiesPerGame() {
 		return robberiesPerGame;
 	}
 
-	public void setRobberiesPerGame(int robberiesPerGame) {
+	public void setRobberiesPerGame(String robberiesPerGame) {
 		this.robberiesPerGame = robberiesPerGame;
 	}
 
-	public int getBlocksPerGame() {
+	public String getBlocksPerGame() {
 		return blocksPerGame;
 	}
 
-	public void setBlocksPerGame(int blocksPerGame) {
+	public void setBlocksPerGame(String blocksPerGame) {
 		this.blocksPerGame = blocksPerGame;
 	}
 	
