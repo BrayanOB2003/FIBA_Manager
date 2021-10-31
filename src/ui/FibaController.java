@@ -2,6 +2,8 @@ package ui;
 
 import java.io.IOException;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +13,15 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import model.Player;
 
 public class FibaController {
+	
+		private final ObservableList<Player> dataList = FXCollections.observableArrayList();
 
 	 	@FXML
 	    private BorderPane contentPane;
@@ -71,9 +76,22 @@ public class FibaController {
     		basePane.getChildren().clear();
     		basePane.setCenter(root);
     		
-    	} 
+    		idName.setCellValueFactory(new PropertyValueFactory<>("name"));
+    		idLastName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+            idAge.setCellValueFactory(new PropertyValueFactory<>("age"));
+            idTeam.setCellValueFactory(new PropertyValueFactory<>("team"));
+            idPoints.setCellValueFactory(new PropertyValueFactory<>("pointsPerGame"));
+            idRebounds.setCellValueFactory(new PropertyValueFactory<>("reboundsPerGame"));
+            idAssists.setCellValueFactory(new PropertyValueFactory<>("assistsPerGame"));
+            idSteals.setCellValueFactory(new PropertyValueFactory<>("robberiesPerGame"));
+            idBlocks.setCellValueFactory(new PropertyValueFactory<>("blocksPerGame"));
+     
+            tablePlayers.setItems(dataList);
+    	}
+    		
+    } 
 
-    }
+ 
     
     public void warningAlert(String title, String text) {
 		
