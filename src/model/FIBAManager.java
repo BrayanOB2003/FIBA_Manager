@@ -38,8 +38,6 @@ public class FIBAManager {
         this.file = file;
         BufferedReader br = new BufferedReader(new FileReader(file));
         
-        //RandomAccessFile raf = new RandomAccessFile(file, "r");
-
         br.readLine();
 
         long pos = 0;
@@ -108,14 +106,10 @@ public class FIBAManager {
                 }
 
             }
-            //pos = raf.getFilePointer();
             pos++;
             temp = br.readLine();
 
         	}
-
-        //raf.close();
         br.close();
-
     }
 }
