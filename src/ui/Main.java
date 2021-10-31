@@ -17,7 +17,7 @@ public class Main extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		FXMLLoader fxmload = new FXMLLoader(getClass().getResource("searchPage.fxml"));
+		FXMLLoader fxmload = new FXMLLoader(getClass().getResource("basePane.fxml"));
 		FibaController fb=new FibaController();
 		fxmload.setController(fb);
 		Parent root=fxmload.load();
@@ -25,6 +25,9 @@ public class Main extends Application{
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		primaryStage.setTitle("Fiba Manager");
+	
+		fb.loadsearchPage();
+		
 		
 	}
 
