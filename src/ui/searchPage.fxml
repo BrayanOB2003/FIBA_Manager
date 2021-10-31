@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane fx:id="contentPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <Pane fx:id="searchPane">
@@ -20,7 +19,7 @@
                </image>
             </ImageView>
             <TextField fx:id="valueBox" layoutX="490.0" layoutY="214.0" promptText="Value" />
-            <Button layoutX="299.0" layoutY="313.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" text="Search">
+            <Button layoutX="299.0" layoutY="313.0" mnemonicParsing="false" onAction="#searchPlayers" prefHeight="38.0" prefWidth="83.0" text="Search">
                <font>
                   <Font size="17.0" />
                </font>
