@@ -154,7 +154,7 @@ public class FibaController {
  
         tablePlayers.setItems(dataList);
         
-        timelabel.setText(time +"ms");
+        timelabel.setText(timelabel.getText() + " " + time +" ms");
     }
     
     @FXML
