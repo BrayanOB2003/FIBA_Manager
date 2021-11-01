@@ -6,6 +6,11 @@
 		</accessrules>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+<<<<<<< HEAD
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+=======
 	<classpathentry kind="lib" path="C:/Users/USUARIO/git/FIBA_Manager/library/opencsv-2.4.jar"/>
+>>>>>>> 186100801a630a7b4033bbf56c7e437813a85f78
 	<classpathentry kind="output" path="bin"/>
 </classpath>
