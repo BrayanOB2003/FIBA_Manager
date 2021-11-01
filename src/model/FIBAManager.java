@@ -33,7 +33,54 @@ public class FIBAManager {
         orb = new AVLTree<>();
         blk = new BST<>();
     }
+    
+    public ArrayList<String> searchByRange(int tree, double start, double end) throws IOException {
+    	ArrayList<String> result = new ArrayList<String>();
+    	
+    	LinkedList<ArrayList<Long>> positions = new LinkedList<>();
+    	
+    	switch(tree) {
+        case TS:
+            positions = ts.searchByRange(start,end);
+            break;
+            
+        case FTR:
+            positions = ftr.searchByRange(start,end);
+            break;
+            
+        case TRB:
+            positions = trb.searchByRange(start,end);
+            break;
+            
+        case ORB:
+            positions = orb.searchByRange(start,end);
+            break;
+            
+        case BLK:
+        	positions = blk.searchByRange(start,end);
+        	break;
+        }
+    	
+    	if (!positions.isEmpty()) {
+    		
+    		CSVReader reader = new CSVReader(new FileReader(file));
+    		ArrayList<String[]> aux = (ArrayList<String[]>)reader.readAll();
+    		
+    		for(ArrayList<Long> pos:positions) {
+        		
+        		for (int i = 0; i < pos.size(); i++) {
+        			String a = Arrays.toString(aux.get(pos.get(i).intValue()));
+        			a.replace("[", "");
+        			a.replace("]", "");
+        			result.add(a);
+        		}
+    		}
 
+    	}
+    	
+    	return result;
+    }
+    
     public void readFiles(File file) throws IOException {
         this.file = file;
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -112,4 +159,6 @@ public class FIBAManager {
         	}
         br.close();
     }
+    
+    
 }
