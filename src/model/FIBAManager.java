@@ -10,28 +10,30 @@ import au.com.bytecode.opencsv.CSVReader;
 import structures.*;
 
 public class FIBAManager {
+	/*" "Points","Rebounds","Assists","Robberies","Blocks" "
+	*/
 	
-	private AVLTree<Double,ArrayList<Long>> ts;
-    private AVLTree<Double,ArrayList<Long>> ftr;
-    private AVLTree<Double,ArrayList<Long>> trb;
-    private AVLTree<Double,ArrayList<Long>> orb;
-    private BST<Double,ArrayList<Long>> blk;
+	private AVLTree<Double,ArrayList<Long>> points;
+    private AVLTree<Double,ArrayList<Long>> rebounds;
+    private AVLTree<Double,ArrayList<Long>> assists;
+    private AVLTree<Double,ArrayList<Long>> robberies;
+    private BST<Double,ArrayList<Long>> blocks;
     private File file;
     private String[] cell;
     
-    public final static int TS = 0;
-    public final static int FTR = 1;
-    public final static int TRB = 2;
-    public final static int ORB = 3;
+    public final static int PTS = 0;
+    public final static int RBS = 1;
+    public final static int ASSIS = 2;
+    public final static int ROBB = 3;
     public final static int BLK = 4;
     
 
     public FIBAManager() {
-        ts = new AVLTree<>();
-        ftr = new AVLTree<>();
-        trb = new AVLTree<>();
-        orb = new AVLTree<>();
-        blk = new BST<>();
+        points = new AVLTree<>();
+        rebounds = new AVLTree<>();
+        assists = new AVLTree<>();
+        robberies = new AVLTree<>();
+        blocks = new BST<>();
     }
     
     public ArrayList<String> search(int tree, double p) throws IOException {
@@ -39,24 +41,24 @@ public class FIBAManager {
         ArrayList<Long> position = new ArrayList<Long>();
         
         switch(tree) {
-        case TS:
-            position = ts.search(p);
+        case PTS:
+            position = points.search(p);
             break;
             
-        case FTR:
-            position = ftr.search(p);
+        case RBS:
+            position = rebounds.search(p);
             break;
             
-        case TRB:
-            position = trb.search(p);
+        case ASSIS:
+            position = assists.search(p);
             break;
             
-        case ORB:
-            position = orb.search(p);
+        case ROBB:
+            position = robberies.search(p);
             break;
             
         case BLK:
-        	position = blk.search(p);
+        	position = blocks.search(p);
         	break;
         }
 
@@ -130,7 +132,7 @@ public class FIBAManager {
 
        ArrayList<String> result = new ArrayList<>();
         ArrayList<Long> position;
-        position = ts.search(p);
+        position = points.search(p);
 
         if (position.size() != 0) {
             RandomAccessFile raf = new RandomAccessFile(file, "r");
@@ -150,24 +152,24 @@ public class FIBAManager {
     	LinkedList<ArrayList<Long>> positions = new LinkedList<>();
     	
     	switch(tree) {
-        case TS:
-            positions = ts.searchByRange(start,end);
+        case PTS:
+            positions = points.searchByRange(start,end);
             break;
             
-        case FTR:
-            positions = ftr.searchByRange(start,end);
+        case RBS:
+            positions = rebounds.searchByRange(start,end);
             break;
             
-        case TRB:
-            positions = trb.searchByRange(start,end);
+        case ASSIS:
+            positions = assists.searchByRange(start,end);
             break;
             
-        case ORB:
-            positions = orb.searchByRange(start,end);
+        case ROBB:
+            positions = robberies.searchByRange(start,end);
             break;
             
         case BLK:
-        	positions = blk.searchByRange(start,end);
+        	positions = blocks.searchByRange(start,end);
         	break;
         }
     	
@@ -205,21 +207,21 @@ public class FIBAManager {
         	cell = temp.split(",");
 
             if (cell[7].equals("") == false) {
-                if (!ts.keyExists(Double.parseDouble(cell[7]))) {
-                    ts.add(Double.parseDouble(cell[7]), new ArrayList<Long>());
+                if (!points.keyExists(Double.parseDouble(cell[7]))) {
+                    points.add(Double.parseDouble(cell[7]), new ArrayList<Long>());
                 }
-                ts.search(Double.parseDouble(cell[7])).add(pos);
+                points.search(Double.parseDouble(cell[7])).add(pos);
 
             }
 
             if (cell[9].equals("") == false) {
 
-                if (ftr.keyExists(Double.parseDouble(cell[9]))) {
-                    ftr.search(Double.parseDouble(cell[9])).add(pos);
+                if (rebounds.keyExists(Double.parseDouble(cell[9]))) {
+                    rebounds.search(Double.parseDouble(cell[9])).add(pos);
 
                 } else {
-                    ftr.add(Double.parseDouble(cell[9]), new ArrayList<Long>());
-                    ftr.search(Double.parseDouble(cell[9])).add(pos);
+                    rebounds.add(Double.parseDouble(cell[9]), new ArrayList<Long>());
+                    rebounds.search(Double.parseDouble(cell[9])).add(pos);
 
                 }
 
@@ -227,12 +229,12 @@ public class FIBAManager {
 
             if (cell[12].equals("") == false) {
 
-                if (trb.keyExists(Double.parseDouble(cell[12]))) {
-                    trb.search(Double.parseDouble(cell[12])).add(pos);
+                if (assists.keyExists(Double.parseDouble(cell[12]))) {
+                    assists.search(Double.parseDouble(cell[12])).add(pos);
 
                 } else {
-                    trb.add(Double.parseDouble(cell[12]), new ArrayList<Long>());
-                    trb.search(Double.parseDouble(cell[12])).add(pos);
+                    assists.add(Double.parseDouble(cell[12]), new ArrayList<Long>());
+                    assists.search(Double.parseDouble(cell[12])).add(pos);
 
                 }
 
@@ -240,25 +242,25 @@ public class FIBAManager {
 
             if (!cell[10].equals("")) {
 
-                if (orb.keyExists(Double.parseDouble(cell[10]))) {
-                    orb.search(Double.parseDouble(cell[10])).add(pos);
+                if (robberies.keyExists(Double.parseDouble(cell[10]))) {
+                    robberies.search(Double.parseDouble(cell[10])).add(pos);
 
                 } else {
-                    orb.add(Double.parseDouble(cell[10]), new ArrayList<Long>());
+                    robberies.add(Double.parseDouble(cell[10]), new ArrayList<Long>());
 
-                    orb.search(Double.parseDouble(cell[10])).add(pos);
+                    robberies.search(Double.parseDouble(cell[10])).add(pos);
 
                 }
             }
 
             if (cell[15].equals("") == false) {
 
-                if (blk.keyExists(Double.parseDouble(cell[15]))) {
-                    blk.search(Double.parseDouble(cell[15])).add(pos);
+                if (blocks.keyExists(Double.parseDouble(cell[15]))) {
+                    blocks.search(Double.parseDouble(cell[15])).add(pos);
 
                 } else {
-                    blk.add(Double.parseDouble(cell[15]), new ArrayList<Long>());
-                    blk.search(Double.parseDouble(cell[15])).add(pos);
+                    blocks.add(Double.parseDouble(cell[15]), new ArrayList<Long>());
+                    blocks.search(Double.parseDouble(cell[15])).add(pos);
 
                 }
 
@@ -271,11 +273,11 @@ public class FIBAManager {
     }
     
     public AVLTree<Double, ArrayList<Long>> getTs() {
-		return ts;
+		return points;
 	}
 
 	public void setTs(AVLTree<Double, ArrayList<Long>> ts) {
-		this.ts = ts;
+		this.points = ts;
 	}
 
 	public File getFile() {
@@ -297,35 +299,35 @@ public class FIBAManager {
 	
 
 	public void setFtr(AVLTree<Double, ArrayList<Long>> ftr) {
-		this.ftr = ftr;
+		this.rebounds = ftr;
 	}
 
 	public void setTrb(AVLTree<Double, ArrayList<Long>> trb) {
-		this.trb = trb;
+		this.assists = trb;
 	}
 
 	public void setOrb(AVLTree<Double, ArrayList<Long>> orb) {
-		this.orb = orb;
+		this.robberies = orb;
 	}
 
 	public void setBlk(BST<Double, ArrayList<Long>> blk) {
-		this.blk = blk;
+		this.blocks = blk;
 	}
 	
 	public  AVLTree<Double, ArrayList<Long>> getFtr() {
-		return ftr;
+		return rebounds;
 	}
 
 	public  AVLTree<Double, ArrayList<Long>> getTrb() {
-		return trb;
+		return assists;
 	}
 
 	public  AVLTree<Double, ArrayList<Long>> getOrb() {
-		return orb;
+		return robberies;
 	}
 
 	public BST<Double, ArrayList<Long>> getBlk() {
-		return blk;
+		return blocks;
 	}
 
 }

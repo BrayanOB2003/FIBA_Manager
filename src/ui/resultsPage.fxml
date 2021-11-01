@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<Pane fx:id="resultsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="resultsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="500.0" fitWidth="799.0" layoutX="-14.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -16,17 +19,22 @@
       </ImageView>
       <TableView fx:id="tablePlayers" layoutX="16.0" layoutY="22.0" prefHeight="343.0" prefWidth="695.0">
          <columns>
-            <TableColumn fx:id="idName" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="idLastName" prefWidth="75.0" text="Last Name" />
-            <TableColumn fx:id="idAge" prefWidth="55.0" text="Age" />
-            <TableColumn fx:id="idTeam" prefWidth="95.0" text="Team" />
-            <TableColumn fx:id="idPoints" prefWidth="75.0" text="Points" />
-            <TableColumn fx:id="idRebounds" prefWidth="87.0" text="Rebounds" />
-            <TableColumn fx:id="idAssists" prefWidth="75.0" text="Assists" />
-            <TableColumn fx:id="idSteals" prefWidth="75.0" text="Steals" />
-            <TableColumn fx:id="idBlocks" prefWidth="75.0" text="Blocks" />
+            <TableColumn fx:id="idName" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="idAge" prefWidth="83.0" text="Age" />
+            <TableColumn fx:id="idTeam" prefWidth="75.0" text="Team" />
+            <TableColumn fx:id="idPoints" prefWidth="84.0" text="Points" />
+            <TableColumn fx:id="idRebounds" prefWidth="78.0" text="Rebounds" />
+            <TableColumn fx:id="idAssists" prefWidth="84.0" text="Assists" />
+            <TableColumn fx:id="idSteals" prefWidth="96.0" text="Steals" />
+            <TableColumn fx:id="idBlocks" prefWidth="94.0" text="Blocks" />
          </columns>
       </TableView>
       <Button layoutX="48.0" layoutY="380.0" mnemonicParsing="false" onAction="#returnSearch" prefHeight="44.0" prefWidth="82.0" text="Return" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bf5934" height="39.0" layoutX="489.0" layoutY="383.0" opacity="0.91" stroke="BLACK" strokeType="INSIDE" width="187.0" />
+      <Label fx:id="timelabel" layoutX="493.0" layoutY="389.0" text="Search Time:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

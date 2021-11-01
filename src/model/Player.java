@@ -1,101 +1,55 @@
 package model;
 
+import javafx.beans.property.SimpleStringProperty;
+
 public class Player {
 	
-	String name;
-	String lastName;
-	String age;
-	String team;
-	String pointsPerGame;
-	String reboundsPerGame;
-	String assistsPerGame;
-	String robberiesPerGame;
-	String blocksPerGame;
-	
-	public Player(String n,String l,String a,String t, String points,String rebounds,String assists,String robberies, String blocks) {
-		name = n;
-		lastName=l;
-		age = a;
-		team = t;
-		pointsPerGame = points;
-		reboundsPerGame = rebounds;
-		assistsPerGame = assists;
-		robberiesPerGame = robberies;
-		blocksPerGame = blocks;
-	}
+		private SimpleStringProperty name, age, team, totalRebounds, offensiveRebounds, blocks, trueShooting, freeThrow;
 
-	public String getName() {
-		return name;
-	}
+		public String getName() {
+			return name.get();
+		}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+		public String getAge() {
+			return age.get();
+		}
 
-	public String getLastName() {
-		return lastName;
-	}
+		public String getTeam() {
+			return team.get();
+		}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+		public String getTotalRebounds() {
+			return totalRebounds.get();
+		}
 
-	public String getAge() {
-		return age;
-	}
+		public String getOffensiveRebounds() {
+			return offensiveRebounds.get();
+		}
 
-	public void setAge(String age) {
-		this.age = age;
-	}
+		public String getBlocks() {
+			return blocks.get();
+		}
 
-	public String getTeam() {
-		return team;
-	}
+		public String getTrueShooting() {
+			return trueShooting.get();
+		}
 
-	public void setTeam(String team) {
-		this.team = team;
-	}
+		public String getFreeThrow() {
+			return freeThrow.get();
+		}
 
-	public String getPointsPerGame() {
-		return pointsPerGame;
-	}
-
-	public void setPointsPerGame(String pointsPerGame) {
-		this.pointsPerGame = pointsPerGame;
-	}
-
-	public String getReboundsPerGame() {
-		return reboundsPerGame;
-	}
-
-	public void setReboundsPerGame(String reboundsPerGame) {
-		this.reboundsPerGame = reboundsPerGame;
-	}
-
-	public String getAssistsPerGame() {
-		return assistsPerGame;
-	}
-
-	public void setAssistsPerGame(String assistsPerGame) {
-		this.assistsPerGame = assistsPerGame;
-	}
-
-	public String getRobberiesPerGame() {
-		return robberiesPerGame;
-	}
-
-	public void setRobberiesPerGame(String robberiesPerGame) {
-		this.robberiesPerGame = robberiesPerGame;
-	}
-
-	public String getBlocksPerGame() {
-		return blocksPerGame;
-	}
-
-	public void setBlocksPerGame(String blocksPerGame) {
-		this.blocksPerGame = blocksPerGame;
-	}
-	
-	
+		public Player(String name, String age, String team,
+				String totalRebounds, String offensiveRebounds, String blocks,
+				String trueShooting, String freeThrow) {
+			
+			this.name = new SimpleStringProperty(name);
+			this.age = new SimpleStringProperty(age);
+			this.team = new SimpleStringProperty(team);
+			this.totalRebounds = new SimpleStringProperty(totalRebounds);
+			this.offensiveRebounds = new SimpleStringProperty(offensiveRebounds);
+			this.blocks = new SimpleStringProperty(blocks);
+			this.trueShooting = new SimpleStringProperty(trueShooting);
+			this.freeThrow = new SimpleStringProperty(freeThrow);
+		}
 
 }
